@@ -1,0 +1,21 @@
+.main-menu-header {
+    background-color: var(--color-grey-5);
+    width: 100vw;
+    height: 6.813rem;
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.main-menu .title-menu {
+    user-select: none;
+}
+
+.main-menu .title-menu span {
+    color: var(--color-brand-1);
+}

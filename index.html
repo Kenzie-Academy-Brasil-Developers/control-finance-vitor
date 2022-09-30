@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Finance</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Control Finance - Seu controle financeiro">
+    <link rel="stylesheet" href="./styles/buttons.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/inputs.css">
+    <link rel="stylesheet" href="./styles/labels.css">
+    <link rel="stylesheet" href="./styles/menu.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <link rel="stylesheet" href="./styles/animations.css">
+    <link rel="stylesheet" href="./pages/home/index.css">
+    <link rel="stylesheet" href="./styles/globalStyles.css">
+</head>
+
+<body>
+    <header class="main-menu-header">
+        <div class="container main-menu">
+            <div class="title-menu">
+                <h1 class="title1-bold"><span>Control</span> Finance</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <button class="primary-btn size-btn open-modal">Registrar novo valor</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="app">
+        <div class="app-content container">
+            <div class="app-header">
+                <h2 class="title2-medium">Resumo financeiro</h2>
+                <nav>
+                    <ul>
+                        <li>
+                            <button id="all" class="outline-btn size-btn filter-btn outline-btn-actived">Todos</button>
+                        </li>
+                        <li>
+                            <button id="0" class="outline-btn size-btn filter-btn">Entradas</button>
+                        </li>
+                        <li>
+                            <button id="1" class="outline-btn size-btn filter-btn">Saídas</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="app-body">
+                <section>
+                    <div class="app-value">
+                        <h3 class="text2-medium">Soma dos valores</h3>
+                        <span class="text1-medium total-value">R$ 00,00</span>
+                    </div>
+                </section>
+                <section class="app-infos"></section>
+            </div>
+        </div>
+    </main>
+    <script src="./scripts/filter.js"></script>
+    <script src="./scripts/deleteItems.js"></script>
+    <script src="./scripts/renders.js"></script>
+    <script src="./scripts/inputs.js"></script>
+    <script src="./scripts/modal.js"></script>
+    <script src="./pages/home/valuesData.js"></script>
+    <script src="./pages/home/index.js"></script>
+    <script src="./scripts/buttons.js"></script>
+</body>
+
+</html>

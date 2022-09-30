@@ -1,0 +1,25 @@
+.default-input {
+    height: 2.75rem;
+    background-color: var(--color-mode);
+    border: 1.5px solid var(--color-grey-3);
+    padding: 0 16px 0 48px;
+    border-radius: var(--radius-1);
+    color: var(--color-grey-1);
+    font-family: var(--font-family-1);
+    font-weight: var(--font-weight-3);
+    font-size: var(--font-size-3);
+    background-image: url(../assets/img/R$.svg);
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position-x: 16px;
+    background-position-y: center;
+}
+
+.default-input::placeholder {
+    color: var(--color-grey-2);
+}
+
+.default-input:focus {
+    outline: none;
+    border: 1.5px solid var(--color-brand-1);
+}

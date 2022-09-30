@@ -20,6 +20,7 @@
   --fixed-white: #ffffff;
   --color-mode: #ffffff;
 
+  --font-size-0: 2rem;
   --font-size-1: 1.25rem;
   --font-size-2: 1rem;
   --font-size-3: 0.875rem;
@@ -30,6 +31,11 @@
   --font-weight-3: 400;
 
   --font-line-height-1: 150%;
+  --font-line-height-2: 2.438rem;
+  --font-line-height-3: 1.5rem;
+  --font-line-height-4: 1.188rem;
+  --font-line-height-5: 1.063rem;
+  --font-line-height-6: 0.938rem;
 
   --radius-1: 0.5rem;
   --radius-2: 0.25rem;
@@ -45,6 +51,10 @@ body {
   font-family: var(--font-family-1);
 }
 
+li {
+  list-style: none;
+}
+
 .container {
   max-width: 43rem;
   margin: 0 auto;
@@ -54,5 +64,40 @@ body {
   .container {
     max-width: 43rem;
     margin: 0 1rem;
+  }
+
+  .main-menu-header {
+    height: 8.25rem;
+    padding: 1.25rem 0;
+  }
+
+  .main-menu nav,
+  .main-menu button {
+    width: 100%;
+  }
+
+  .app-header {
+    margin: 1.75rem 0;
+  }
+
+  .app-header nav {
+    width: 100%;
+    margin-top: 2.375rem;
+  }
+
+  .app-value {
+    margin-bottom: 28px;
+  }
+
+  .modal-box {
+    width: 94%;
+    height: 432px;
+    top: 56px;
+  }
+  
+  .modal-box .value-type {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
   }
 }
