@@ -32,7 +32,7 @@ const renderModal = () => {
             <form>
                 <p class="text1-regular">Digite o valor e em seguida aperte no botão referente ao tipo do valor </p>
                 <label class="default-label" for="modal-value">Valor</label>
-                <input type="text" name="value" id="modal-value" class="default-input input" placeholder="00,00" required>
+                <input type="text" name="value" id="modal-value" class="default-input input" maxlength="22" placeholder="00,00" required>
                 <div class="value-type">
                     <h5 class="text2-medium">Tipo de valor</h5>
                     <div class="modal-options" required>
