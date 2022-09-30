@@ -7,7 +7,7 @@ const checkFilterClick = () => {
 
             selectedButton = event.path[0].innerHTML;
             filterValues(event.target.id);
-            activateButtons(event.target, event.path[2].children);
+            activateButtons(event.target, event.path[2].children, 1);
         }
     })
 }

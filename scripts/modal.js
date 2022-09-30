@@ -10,8 +10,8 @@ const openModal = () => {
             const options = document.querySelector(".modal-options");
             options.onclick = e => {
                 if (e.target.tagName.toLowerCase() === "label") {
-                    console.log(e.target)
-                    console.dir(options)
+                    const arr = [e.path[1].children[1], e.path[1].children[3]];
+                    activateButtons(e.target, arr, 2);
                 }
             }
         }
@@ -32,7 +32,7 @@ const renderModal = () => {
             <form>
                 <p class="text1-regular">Digite o valor e em seguida aperte no botão referente ao tipo do valor </p>
                 <label class="default-label" for="modal-value">Valor</label>
-                <input type="text" name="value" id="modal-value" class="default-input" placeholder="00,00" required>
+                <input type="text" name="value" id="modal-value" class="default-input input" placeholder="00,00" required>
                 <div class="value-type">
                     <h5 class="text2-medium">Tipo de valor</h5>
                     <div class="modal-options" required>
@@ -63,14 +63,36 @@ const closeModal = () => {
 }
 
 const capitalizeModalValue = () => {
+    let obj = {};
+    removeCaractere();
+
     const inputValue = document.querySelector(".input-value");
     inputValue.onclick = e => {
         e.preventDefault()
         const form = e.path[2];
-        console.dir(form[1].checked)
-    }
-}
+        if (form[0].value != "" && form[1].checked || form[2].checked) {
+            obj.id = insertedValues.length + 1;
+            obj.value = parseFloat(form[0].value.replace(".", "").replace(",", "."));
+            
+            if (isNaN(obj.value)) {
+                return false;
+            }
 
-const test1 = () => {
-    console.log("testei");
+            if (form[1].checked) {
+                obj.categoryID = valuesCategory.findIndex(e => e == "Entrada");
+
+            } else {
+                obj.categoryID = valuesCategory.findIndex(e => e == "Saída");
+            }
+
+            insertedValues.push(obj);
+            document.querySelector(".modal").remove();
+            if (selectedButton.toLowerCase() !== "todos") {
+                insertedValuesfiltered.push(obj);
+                renderCards(insertedValuesfiltered);
+            } else {
+                renderCards(insertedValues);
+            }
+        }
+    }
 }
