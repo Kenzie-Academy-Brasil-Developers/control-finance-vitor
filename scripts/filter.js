@@ -4,7 +4,6 @@ const checkFilterClick = () => {
     const filterBtn = document.querySelectorAll(".filter-btn");
     filterBtn.forEach(elem => {
         elem.onclick = event => {
-
             selectedButton = event.path[0].innerHTML;
             filterValues(event.target.id);
             activateButtons(event.target, event.path[2].children, 1);

@@ -73,7 +73,7 @@ const capitalizeModalValue = () => {
         if (form[0].value != "" && form[1].checked || form[2].checked) {
             obj.id = insertedValues.length + 1;
             obj.value = parseFloat(form[0].value.replace(".", "").replace(",", "."));
-            
+
             if (isNaN(obj.value)) {
                 return false;
             }
@@ -87,9 +87,13 @@ const capitalizeModalValue = () => {
 
             insertedValues.push(obj);
             document.querySelector(".modal").remove();
-            if (selectedButton.toLowerCase() !== "todos") {
+            if (selectedButton.toLowerCase() === "saídas" && obj.categoryID === 1) {
+                insertedValuesfiltered.push(obj);
                 renderCards(insertedValuesfiltered);
-            } else {
+            } else if (selectedButton.toLowerCase() === "entradas" && obj.categoryID === 0) {
+                insertedValuesfiltered.push(obj);
+                renderCards(insertedValuesfiltered);
+            } else if (selectedButton.toLowerCase() === "todos") {
                 renderCards(insertedValues);
             }
         }
