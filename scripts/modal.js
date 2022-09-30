@@ -88,7 +88,6 @@ const capitalizeModalValue = () => {
             insertedValues.push(obj);
             document.querySelector(".modal").remove();
             if (selectedButton.toLowerCase() !== "todos") {
-                insertedValuesfiltered.push(obj);
                 renderCards(insertedValuesfiltered);
             } else {
                 renderCards(insertedValues);
